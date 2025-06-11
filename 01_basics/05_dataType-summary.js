@@ -24,8 +24,8 @@ console.log(typeof bignumber)
 //  reference  (non primitive )
 // array , object , function
 
-// not primitive return the typeof data is object only
-// function return the function output but this is always object function in backend
+// not primitive  datatypes return the typeof data is object only
+// but function return the function output but this is always object function in backend
 
 
 // array
