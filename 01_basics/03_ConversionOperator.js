@@ -1,5 +1,6 @@
 let score = "33abc"
 console.log(score)
+
 console.log(typeof score)
 console.log(typeof(score))
 
@@ -49,7 +50,7 @@ let str1 = "hello"
 let str2 = " shyam"
 
 let str3 = str1 + str2
- console.log(str3);         // output : hellow shyam
+ console.log(str3);       // output : hellow shyam
 
  console.log("1" + 2);      //output : 12
  console.log(1 + "2");      //out put : 12
