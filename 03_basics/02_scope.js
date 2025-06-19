@@ -10,9 +10,7 @@ if(true){
     console.log("inner a : " , a);
 }
 // let ,const,var is block of code this code is only valide for that block but the problem is var 
-// var not fallow the rule // var ha print kelya nantar pan tich value provide kartoy ye ani baher
-// dusra var jari declare kela tari to if bloc madhalich value print karto tyamule let ani const 
-// navin js madhe ale ahe 
+// var not fallow the rule other let or const doens't print outside the scope but the var print the outside the scop
 
 
 // console.log(a);  // a is not defined
