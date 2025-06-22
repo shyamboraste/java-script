@@ -9,7 +9,7 @@ for (let i = 0; i <= 20; i++) {
     
 }
 // console.log(element)  output : error because variable scope is end
-// output : 0 1 2 4 5 is the best number 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+// output : 0 1 2 4 5is the best number 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 
 
 for (let i = 1; i <= 10; i++) {
