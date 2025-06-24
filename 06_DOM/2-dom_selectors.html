@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom selector </title>
+</head>
+
+<body>
+    <div class="bg-black">
+        <h1 class="heading" id="title"> dom learong on chai our code <span style=" display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+<p>Lorem ipsum dolor sit.</p>
+<input type="password"> submit
+<ul>
+    <li  class="list">one</li>
+    <li  class="list">tow</li>
+    <li  class="list">three</li>
+</ul>
+    </div>
+</body>
+</html>
+
+<!-- ===================================================== -->
+
+
+<!-- document.getElementById('title').id
+'title'
+
+document.getElementById('title').class     
+undefined
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class' , 'test')  ==> o/p jari undefined yet asel tari class name he change jhalel ahe  // inspect madhech lagech baghave
+undefined
+
+const title = document.getElementById('title')      //   yala ata apan eika variable madhe store kel ahe ani ata apan nantar fakt variable ghevu shakto
+undefined
+
+title 
+<h1 class="heading" id="title"> dom learong on chai our code</h1>
+
+// appalying style
+title.style.backgroundColor = 'green'
+'green'
+title.style.padding = '15px'
+'15px'
+title.style.borderRadius = '20px'
+'20px'
+
+// SELECTING TEXT
+title.textCotent
+undefined
+title.textContent
+' dom learong on chai our code test text'
+title.innerHTML
+' dom learong on chai our code <span style=" display: none;">test text</span>'
+
+
+
+document.getElementsByClassName('heading')
+HTMLCollection(2) [h1#title.heading, h1#title.heading, title: h1#title.heading]0: h1#title.heading1: h1#title.headingtitle: h1#title.headinglength: 2[[Prototype]]: HTMLCollection
+
+
+document.querySelector('h2')           ==>> pahila jo h2 asel toch return karel
+<h2>​Lorem ipsum dolor sit amet.​</h2>​
+document.querySelector('.heading')
+<h1 class=​"heading" id=​"title">​…​</h1>​
+
+
+document.querySelector('input[type="password"]')
+<input type=​"password">​
+
+
+document.querySelector('ul')
+<ul>​…​</ul>​
+
+const myul = document.querySelector('ul')
+undefined
+
+myul.querySelector('li')
+<li>​…​</li>​
+
+const turnGreen = myul.querySelector('li')
+undefined
+
+turnGreen.style.backgroundColor = "green"
+'green'
+
+turnGreen.style.padding = "20px"
+'20px'
+
+turnGreen.style.borderRadius = "20px"
+'20px'
+
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()length: 1name: "forEach"arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+
+const tempLIlist = document.querySelectorAll('li')
+undefined
+
+tempLIlist
+NodeList(3) [li, li, li]
+
+const myarr = [1,2,3]
+undefined
+
+myarr
+(3) [1, 2, 3]0: 11: 22: 3length: 3[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+
+                                       tempLIlist.style.color = "green"
+                                       VM3385:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+                                           at <anonymous>:1:24
+                                       (anonymous) @ VM3385:1
+                                       [NEW] Explain Console errors by using Copilot in Edge: click
+         
+                                                to explain an error. 
+                                               Learn more
+                                               Don't show again
+
+
+tempLIlist[0].style.color = "green"
+'green'
+
+
+const myh1 = document.querySelectorAll('h1')
+undefined
+
+myh1
+NodeList(3) [h1#title.heading, h1#title.heading, h1#​"title".​"heading"]
+
+                         myh1.style.color = "white"
+                            VM3541:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+                             at <anonymous>:1:18
+                         (anonymous) @ VM3541:1
+
+tempLIlist
+NodeList(3) [li, li, li]
+
+tempLIlist.forEach(function (l) {})
+undefined
+
+tempLIlist.forEach(function (l) {})
+undefined
+
+tempLIlist.forEach(function (l) { l.style.backgroundColor = "red"})
+undefined
+
+
+// getElementsByClassName
+
+
+document.getElementsByClassName('list')
+HTMLCollection(3) [li.list, li.list, li.list]0: li.list1: li.list2: li.listlength: 3[[Prototype]]: HTMLCollectionitem: ƒ item()length: (...)namedItem: ƒ namedItem()constructor: ƒ HTMLCollection()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "HTMLCollection"get length: ƒ length()[[Prototype]]: Object
+
+const tempclass = document.getElementsByClassName('list')
+undefined
+
+tempclass
+HTMLCollection(3) [li.list, li.list, li.list]
+
+                                  tempclass.forEach(function (li) {
+                                  console.log(li)
+                                  })
+                                     VM3948:1 Uncaught TypeError: tempclass.forEach is not a function
+                                      at <anonymous>:1:11
+                                  (anonymous) @ VM3948:1 -->
