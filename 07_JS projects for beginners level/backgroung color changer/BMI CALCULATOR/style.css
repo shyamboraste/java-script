@@ -1,0 +1,29 @@
+.container{
+height: 600px;
+width: 800px;
+color: white;
+background-color: purple;
+text-align: center;
+font-size: 30px;
+}
+.guide{
+    color: white;
+}
+button{
+    font-size: 20px;
+    border : 2px solid black;
+}
+button:hover{
+    font-size: 22px;
+    background-color: yellow;
+    border-radius: 20px;
+}
+h2{
+    font-size: 25px;
+    text-decoration: underline;
+    color: black;
+}
+.result{
+    font-size: 30px;
+    color: greenyellow;
+}
