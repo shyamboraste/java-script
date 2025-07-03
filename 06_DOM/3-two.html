@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    // output :-
+    // <div class="parent">…</div>
+
+    console.log(parent.children);
+    // output:-
+    // [div.day, div.day, div.day, div.day]
+
+    console.log(parent.children[1].innerHTML);
+    // o/p  => Tuesday
+
+    for (let i = 0; i < parent.children.length; i++) {
+         console.log(parent.children[i].innerHTML);
+        
+    }
+    // output:
+               //  Monday
+               //  Tuesday
+               //  Wednesday
+               //  Thursday
+
+
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    // output :-
+                // <div class="day">Monday</div>
+                // <div class="day">Thursday</div>
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    // o/p ==>  <div class="day">Monday</div>
+
+    console.log(dayOne.parentElement);
+    //o/p ==> <div class="parent">…</div>
+
+    console.log(dayOne.nextElementSibling);
+   // o/p ==>  <div class="day" style="color: orange;">Tuesday</div>
+
+    console.log("NODES: ", parent.childNodes);
+    // output :-
+              // [text, comment, text, div.day, text, div.day, text, div.day, text, div.day, text]
+</script>
+
+</html>
