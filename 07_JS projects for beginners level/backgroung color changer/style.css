@@ -1,0 +1,30 @@
+html {
+    margin : 0px;
+    padding : 0px;
+}
+
+span{
+    display: block;
+}
+
+.button {
+    height: 100px;
+    width : 100px;
+    display: inline-block;
+    border : 5px solid black;
+}
+#grey{
+    background-color : grey;
+}
+#red{
+    background-color : red;
+}
+#green{
+    background-color : green;
+}
+#pink{
+    background-color : pink;
+}
+#yellow{
+    background-color : yellow;
+}
