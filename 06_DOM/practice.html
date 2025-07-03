@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom selector </title>
+</head>
+
+<body>
+    <div class="bg-black">
+        <h1 class="heading" id="title"> dom learong on chai our code <span style=" display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+<p>Lorem ipsum dolor sit.</p>
+<input type="password"> submit
+<ul>
+    <li  class="list">one</li>
+    <li  class="list">tow</li>
+    <li  class="list">three</li>
+</ul>
+    </div>
+</body>
+</html>
+
+
+
+<!-- document.getElementById('title').id
+'title'
+
+document.getElementById('title').class     
+undefined
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class' , 'test')  ==> o/p jari undefined yet asel tari class name he change jhalel ahe  // inspect madhech lagech baghave
+undefined
+
+const title = document.getElementById('title')      //   yala ata apan eika variable madhe store kel ahe ani ata apan nantar fakt variable ghevu shakto
+undefined
+
+title 
+<h1 class="heading" id="title"> dom learong on chai our code</h1>
+
+// appalying style
+title.style.backgroundColor = 'green'
+'green'
+title.style.padding = '15px'
+'15px'
+title.style.borderRadius = '20px'
+'20px'
+
+// SELECTING TEXT
+title.textCotent
+undefined
+title.textContent
+' dom learong on chai our code test text'
+title.innerHTML
+' dom learong on chai our code <span style=" display: none;">test text</span>'
