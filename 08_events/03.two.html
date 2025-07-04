@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1> js and me</h1>
+<button id="stop">stop</button>
+
+</body>
+<script>
+
+  // syntax
+  // setTimeout(() => {
+  // }, timeout);
+
+
+    // setTimeout(function () {
+    //     console.log("shaym")
+    // },2000);
+    // 2 second ke bad mera shyam name print hoga but only one time
+
+    const myname = function () {
+        console.log("shaym")
+    };
+
+    // setTimeout(myname , 2000);
+
+    const changename = function (){
+        document.querySelector('h1')
+.innerHTML = "best js series"
+    }
+    
+    const SHAM = setTimeout(changename , 2000);
+
+  document.querySelector('#stop').addEventListener('click' , function(){
+    clearTimeout(SHAM);
+    console.log("stop");
+  })
+  
+  // now you click the stop button the cleartimeout function is triggered and stop 
+</script>
+</html>
