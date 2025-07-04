@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body style="background-color: black; color: antiquewhite;">
+    <h2>amazing image</h2>
+    <div>
+        <ul id="IMG">
+            <li><img width="200px" id="photoshop" src="https://images.unsplash.com/photo-1726661025462-b0ddd7a363a8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                alt="photosope"></li>
+            <li><img width="200px" id="lady" src="https://images.unsplash.com/photo-1607004468138-e7e23ea26947?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRpZmZlcmVudHxlbnwwfHwwfHx8MA%3D%3D" 
+                    alt="lady"></li>
+            <li><img width="200px" id="coder" src="https://images.unsplash.com/photo-1511298341002-15d91b5d09b7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                        alt="coder"></li>
+            <li><a style="color: blue;" href="https://google.com" id="google">google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // first approach but not suitable
+//  document.getElementById('lady').onclick = function(){
+//     alert("lady clicked");
+//  }
+
+
+//attachEvent()
+ //jquery - on
+
+
+ // second approach best approach 
+//  document.getElementById('lady').addEventListener('click' , function(e){
+//        console.log(e)     
+// },false )// third paramenetr is bydefault false
+// first run and then console clicked image and you see the all events 
+
+
+//types , timettamp , defaultprevented
+// terget , toelement , srcElement , currenttarget,
+//clientX, clientY , screenX , screenY
+// altkey , ctrlkey,swiftkey , keycode
+
+
+
+// event propogation 
+// false, true
+
+// 1.event bubbling 
+// 2.event capturing
+
+
+// 1. example of bubbling => jo ki niche se uper tak jata hain like first click the inner element  and outer element one by one
+//   document.getElementById('#images').addEventListener('click' , function(e){
+//        console.log("clicked inside the ul")  
+//        e.stoppropogation();   ==> only the display who clicked and stop the propagation
+// },flase )
+// document.getElementById('lady').addEventListener('click' , function(e){
+//        console.log(" lady clicked ")    
+
+// },flase )   
+
+
+  
+//2.example of capturing => proccesing the up to down which meanse first clicked the outer element and then print the inner element 
+// document.getElementById('#images').addEventListener('click' , function(e){
+//        console.log("clicked inside the ul")  
+// },true )
+// document.getElementById('lady').addEventListener('click' , function(e){
+//        console.log(" lady clicked ")    
+
+// },true )
+
+
+// document.getElementById('google').addEventListener('click' , function(e){
+//     e.preventDefault(); //==>   first write this method after write console or any other method or function
+//     console.log('google clicked');
+//     e.stopPropagation();
+// },false)
+
+
+document.querySelector('ul').addEventListener('click', function(e) {
+    console.log(e.target.parentNode.id);
+
+    if(e.target.id == 'IMG'){
+        console.log(e.target);
+            let remove = e.target.parentNode
+             remove.remove()
+
+    }
+            // remove.parentNode.removeChild(remove)
+
+    // remove.parentNode.removeChild(remove)
+    // // hya case madhe jar ul varti click kel tar purn ul unvisible hoil but jar aplya la he noko asel tar kahi strict ckeck lavave lagtil
+
+    
+});
+
+ 
+ 
+ 
+</script>
+</html>
