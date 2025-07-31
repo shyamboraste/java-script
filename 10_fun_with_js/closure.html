@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure in js</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    
+</body>
+<script>
+
+function dad(){
+   let candy = "wov";
+//    console.log("outer",banana)
+// output := banana is not define
+
+   function sham(){
+    let banana = "hellow";
+    console.log("inner one",candy)
+   }
+
+   function digvijay(){
+    let mango = "byby";
+    console.log("inner two ",candy)
+   }
+   sham()
+   digvijay()
+}
+dad();
+// console.log(candy);
+
+
+
+
+
+//--------------------------------//
+
+
+function makefunc(){
+    const name = "sham";
+
+    function displayname(){
+        console.log(name);
+    }
+    return displayname;
+}
+const myfunc = makefunc();
+myfunc();
+
+
+</script>
+
+
+<script>
+// document.getElementById('orange').onclick = function(){
+//     document.body.style.backgroundColor = 'orange';
+// }
+// document.getElementById('green').onclick = function(){
+//     document.body.style.backgroundColor = 'green';
+// }
+
+
+
+// example of lexocal scope
+
+function clickhandler(color){
+    // document.body.style.backgroundColor = `${color}`;
+
+    return function(){
+    document.body.style.backgroundColor = `${color}`
+    }
+}
+
+document.getElementById('green').onclick = clickhandler("green")
+document.getElementById('orange').onclick = clickhandler("orange")
+ 
+
+</script>
+</html>
